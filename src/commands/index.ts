@@ -36,7 +36,6 @@ export default class Create extends Command {
         if (!args.name) {
             const name = await input({
                 message: 'What is the name of your application?',
-                default: path.basename(process.cwd())
             });
 
             args.name = name
