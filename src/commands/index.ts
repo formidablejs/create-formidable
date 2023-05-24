@@ -44,8 +44,11 @@ export default class Create extends Command {
         const installerArgs = ['new', args.name]
 
         for (const [key, value] of Object.entries(flags)) {
-            if (value) {
+            if (value === true) {
                 installerArgs.push(`--${key}`)
+            } else {
+                installerArgs.push(`--${key}`)
+                installerArgs.push(value)
             }
         }
 
