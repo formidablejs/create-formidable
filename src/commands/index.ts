@@ -28,6 +28,7 @@ export default class Create extends Command {
         svelte: Flags.boolean({ description: 'Create Svelte Full-Stack application' }),
         type: Flags.string({ description: 'The type of application to create', char: 't', options: ['api', 'full-stack'] }),
         vue: Flags.boolean({ description: 'Create Vue Full-Stack application' }),
+        verbose: Flags.boolean({ description: 'Verbose output' }),
     }
 
     async run(): Promise<void> {
