@@ -1,6 +1,6 @@
 {
     "name": "create-formidable",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "The Formidable Framework Installer",
     "author": "Donald Pakkies @donaldp",
     "bin": {
@@ -17,7 +17,7 @@
         "/oclif.manifest.json"
     ],
     "dependencies": {
-        "@formidablejs/installer": "^0.9.4",
+        "@formidablejs/installer": "^0.9.5",
         "@inquirer/prompts": "^1.2.1",
         "@oclif/core": "^2",
         "@oclif/plugin-help": "^5",
