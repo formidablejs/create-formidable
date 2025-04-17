@@ -1,6 +1,6 @@
 {
     "name": "create-formidable",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "The Formidable Framework Installer",
     "author": "Donald Pakkies @donaldp",
     "bin": {
