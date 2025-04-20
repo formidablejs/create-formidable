@@ -239,10 +239,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@formidablejs/installer@^0.9.10":
-  version "0.9.10"
-  resolved "https://registry.yarnpkg.com/@formidablejs/installer/-/installer-0.9.10.tgz#36e57083484897d4ca1f63cd0c412af226756f36"
-  integrity sha512-bk6mvE231SpiE4sToC9NfXSzNSTc4RfMtjAT+K4V6b3I+c8sN/NjeH6Px6gwY4FK8D2iKlpIEJu/5ZIGDzDP3A==
+"@formidablejs/installer@^0.9.11":
+  version "0.9.11"
+  resolved "https://registry.yarnpkg.com/@formidablejs/installer/-/installer-0.9.11.tgz#ff9d5d7bdbea213b2c586a318c9d9f1943ac3707"
+  integrity sha512-erkJEXHdpboSRML1EOm58uzXwgRmRo1OEH0O63PPclH5tSzKv5GSYf7uMjERl6Ft0rs0aVZ1m7GYRG43HNLunA==
   dependencies:
     "@oclif/core" "^1"
     "@oclif/plugin-help" "^5"
