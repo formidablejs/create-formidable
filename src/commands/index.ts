@@ -1,7 +1,10 @@
 import { Args, Command, Flags } from '@oclif/core'
 import { input } from '@inquirer/prompts'
 import { run } from '@formidablejs/installer'
-import path = require('path')
+
+type Mapper = {
+    [key: string]: string
+}
 
 export default class Create extends Command {
     static description = 'Create a new Formidable application'
@@ -41,6 +44,27 @@ export default class Create extends Command {
             });
 
             args.name = name
+        }
+
+        if (!flags['use-pnpm'] && !flags['use-npm'] && !flags['use-yarn'] && !flags['use-bun'] && !flags.manager) {
+            const userAgent = process.env.npm_config_user_agent
+
+            if (userAgent && typeof userAgent === 'string') {
+                const agent = userAgent.split('/')[0]
+
+                const mapper: Mapper = {
+                    'npm': 'npm',
+                    'pnpm': 'pnpm',
+                    'yarn': 'yarn',
+                    'yarn@berry': 'yarn',
+                    'bun': 'bun',
+                    'pnpm@6': 'pnpm',
+                }
+
+                if (agent !== '' && Object.keys(mapper).includes(agent)) {
+                    flags.manager = mapper[agent]
+                }
+            }
         }
 
         const installerArgs = ['new', args.name]
