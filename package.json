@@ -4,12 +4,15 @@
     "description": "The Formidable Framework Installer",
     "author": "Donald Pakkies @donaldp",
     "bin": {
-        "create-formidable": "./bin/run.js"
+        "create-formidable": "bin/run.js"
     },
     "homepage": "https://github.com/formidablejs/create-formidable",
     "license": "MIT",
     "main": "dist/index.js",
-    "repository": "formidablejs/create-formidable",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/formidablejs/create-formidable.git"
+    },
     "files": [
         "./bin",
         "./dist",
