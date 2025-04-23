@@ -1,1 +1,3 @@
-export {run} from '@oclif/core'
+import Create from './commands/index'
+
+export default Create
